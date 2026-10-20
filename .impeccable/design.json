@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T00:52:35+00:00",
+  "title": "Design System: CourtSide",
+  "extensions": {
+    "colorMeta": {
+      "key-paint-orange": {
+        "role": "primary",
+        "displayName": "Key Paint Orange",
+        "canonical": "#FF6B2C",
+        "tonalRamp": [
+          "#2D0000",
+          "#560000",
+          "#820000",
+          "#AF1700",
+          "#DA4800",
+          "#FF7033",
+          "#FFA170",
+          "#FFCDA3"
+        ]
+      },
+      "key-paint-pressed": {
+        "role": "primary",
+        "displayName": "Key Paint Pressed",
+        "canonical": "#E85A1D",
+        "tonalRamp": [
+          "#2C0000",
+          "#550000",
+          "#800000",
+          "#AD1D00",
+          "#D84B00",
+          "#FF723B",
+          "#FFA274",
+          "#FFCEA6"
+        ]
+      },
+      "orange-ink": {
+        "role": "primary",
+        "displayName": "Orange Ink",
+        "canonical": "#C2410C",
+        "tonalRamp": [
+          "#2B0000",
+          "#520000",
+          "#7D0300",
+          "#A92700",
+          "#D25022",
+          "#FD774C",
+          "#FFA57E",
+          "#FFCFAD"
+        ]
+      },
+      "boundary-navy": {
+        "role": "secondary",
+        "displayName": "Boundary Navy",
+        "canonical": "#1F3A5F",
+        "tonalRamp": [
+          "#000925",
+          "#092346",
+          "#254066",
+          "#425F87",
+          "#6482AC",
+          "#87A7D2",
+          "#ACCDFA",
+          "#D0F1FF"
+        ]
+      },
+      "on-navy": {
+        "role": "secondary",
+        "displayName": "On Navy",
+        "canonical": "#FFFFFF"
+      },
+      "navy-tint": {
+        "role": "secondary",
+        "displayName": "Navy Tint",
+        "canonical": "#E4E9F0",
+        "tonalRamp": [
+          "#080B10",
+          "#212429",
+          "#3C4046",
+          "#5A5E64",
+          "#7C8187",
+          "#A0A5AC",
+          "#C6CBD2",
+          "#EAEFF6"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "#F3F4F2",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#242423",
+          "#3F403E",
+          "#5D5E5C",
+          "#80807F",
+          "#A4A5A3",
+          "#CACBC9",
+          "#EEEFED"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#FFFFFF"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#E2E4DF"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1B1D1B",
+        "tonalRamp": [
+          "#0A0C0A",
+          "#232523",
+          "#3E403E",
+          "#5C5E5C",
+          "#7E817E",
+          "#A3A5A3",
+          "#C9CBC9",
+          "#ECEFEC"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#545A55"
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Ink Faint",
+        "canonical": "#6F756F"
+      },
+      "pressed": {
+        "role": "neutral",
+        "displayName": "Pressed",
+        "canonical": "#ECEDEA"
+      },
+      "tab-bar": {
+        "role": "neutral",
+        "displayName": "Tab Bar",
+        "canonical": "#FFFFFF"
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Danger",
+        "canonical": "#B3261E",
+        "tonalRamp": [
+          "#2B0000",
+          "#540000",
+          "#7F0000",
+          "#AC1D17",
+          "#D64A3D",
+          "#FF7161",
+          "#FFA08F",
+          "#FFCCBB"
+        ]
+      },
+      "danger-tint": {
+        "role": "neutral",
+        "displayName": "Danger Tint",
+        "canonical": "#FCE8E6"
+      },
+      "surface-maple": {
+        "role": "tertiary",
+        "displayName": "Maple",
+        "canonical": "#E3BD86",
+        "tonalRamp": [
+          "#1A0500",
+          "#391C00",
+          "#583800",
+          "#78571F",
+          "#9D7944",
+          "#C39E68",
+          "#EAC48D",
+          "#FFE8B4"
+        ]
+      },
+      "surface-maple-alt": {
+        "role": "tertiary",
+        "displayName": "Maple Board",
+        "canonical": "#DCB37B"
+      },
+      "surface-pitch": {
+        "role": "tertiary",
+        "displayName": "Pitch",
+        "canonical": "#3A7449",
+        "tonalRamp": [
+          "#001200",
+          "#002E0B",
+          "#0E4D24",
+          "#326C41",
+          "#559063",
+          "#7AB587",
+          "#9FDCAC",
+          "#C7FFD2"
+        ]
+      },
+      "surface-pitch-alt": {
+        "role": "tertiary",
+        "displayName": "Pitch Stripe",
+        "canonical": "#356C44"
+      },
+      "surface-tennis": {
+        "role": "tertiary",
+        "displayName": "Tennis Surround",
+        "canonical": "#3B7A57",
+        "tonalRamp": [
+          "#001301",
+          "#002F13",
+          "#034D2D",
+          "#2C6C4A",
+          "#51906C",
+          "#75B58F",
+          "#9BDCB5",
+          "#C2FFDA"
+        ]
+      },
+      "surface-hard-court": {
+        "role": "tertiary",
+        "displayName": "Hard Court Blue",
+        "canonical": "#2F6E9E",
+        "tonalRamp": [
+          "#000A28",
+          "#00264B",
+          "#004370",
+          "#226292",
+          "#4886B8",
+          "#6CABDF",
+          "#92D2FF",
+          "#BDF6FF"
+        ]
+      },
+      "surface-turf": {
+        "role": "tertiary",
+        "displayName": "Turf",
+        "canonical": "#2F6B3F",
+        "tonalRamp": [
+          "#001200",
+          "#002F0A",
+          "#0B4D23",
+          "#306C40",
+          "#549062",
+          "#78B685",
+          "#9EDCAA",
+          "#C6FFD1"
+        ]
+      },
+      "surface-turf-alt": {
+        "role": "tertiary",
+        "displayName": "Turf Stripe",
+        "canonical": "#2B6339"
+      },
+      "surface-diamond-grass": {
+        "role": "tertiary",
+        "displayName": "Diamond Grass",
+        "canonical": "#3D7A46",
+        "tonalRamp": [
+          "#001200",
+          "#002F04",
+          "#0A4D1C",
+          "#306D3A",
+          "#53915B",
+          "#78B67F",
+          "#9DDDA4",
+          "#C7FFCC"
+        ]
+      },
+      "surface-clay": {
+        "role": "tertiary",
+        "displayName": "Infield Clay",
+        "canonical": "#B5653A",
+        "tonalRamp": [
+          "#230000",
+          "#470B00",
+          "#6E2600",
+          "#914516",
+          "#B8683D",
+          "#E18D61",
+          "#FFB389",
+          "#FFDBB5"
+        ]
+      },
+      "surface-pickup": {
+        "role": "tertiary",
+        "displayName": "Pickup Asphalt",
+        "canonical": "#4A4F57",
+        "tonalRamp": [
+          "#080B11",
+          "#20242B",
+          "#3B4048",
+          "#595E66",
+          "#7B8189",
+          "#9FA5AE",
+          "#C5CBD4",
+          "#E9EFF9"
+        ]
+      },
+      "surface-pickup-alt": {
+        "role": "tertiary",
+        "displayName": "Asphalt Stripe",
+        "canonical": "#454A52"
+      },
+      "court-paint": {
+        "role": "tertiary",
+        "displayName": "Court Paint",
+        "canonical": "#FFFFFF"
+      },
+      "dusk-overlay": {
+        "role": "tertiary",
+        "displayName": "Dusk Overlay (40%)",
+        "canonical": "#0B0D12"
+      },
+      "dusk-ink": {
+        "role": "tertiary",
+        "displayName": "Dusk Ink",
+        "canonical": "#FFF4E6",
+        "tonalRamp": [
+          "#110A03",
+          "#2A2318",
+          "#473E33",
+          "#655C50",
+          "#887F72",
+          "#ADA396",
+          "#D3C9BB",
+          "#F8EDDF"
+        ]
+      },
+      "dark-ground": {
+        "role": "neutral",
+        "displayName": "Dark Ground",
+        "canonical": "#15171C",
+        "tonalRamp": [
+          "#090B10",
+          "#222429",
+          "#3D4045",
+          "#5B5D64",
+          "#7D8087",
+          "#A2A4AB",
+          "#C7CAD2",
+          "#EBEEF6"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Dark Paper",
+        "canonical": "#1F2229"
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark Line",
+        "canonical": "#2E323B"
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "canonical": "#EDEAE3"
+      },
+      "dark-ink-soft": {
+        "role": "neutral",
+        "displayName": "Dark Ink Soft",
+        "canonical": "#B4B7BE"
+      },
+      "dark-ink-faint": {
+        "role": "neutral",
+        "displayName": "Dark Ink Faint",
+        "canonical": "#8E929A"
+      },
+      "dark-navy": {
+        "role": "neutral",
+        "displayName": "Dark Navy",
+        "canonical": "#A9C1E3",
+        "tonalRamp": [
+          "#000A22",
+          "#12243E",
+          "#2D415D",
+          "#4A5F7D",
+          "#6B82A1",
+          "#8FA6C7",
+          "#B4CCEF",
+          "#D8F1FF"
+        ]
+      },
+      "dark-navy-tint": {
+        "role": "neutral",
+        "displayName": "Dark Navy Tint",
+        "canonical": "#26303F"
+      },
+      "dark-orange-ink": {
+        "role": "neutral",
+        "displayName": "Dark Orange Ink",
+        "canonical": "#FFB27A",
+        "tonalRamp": [
+          "#220000",
+          "#451000",
+          "#6A2A00",
+          "#8D4904",
+          "#B36C34",
+          "#DB9159",
+          "#FFB781",
+          "#FFDEAF"
+        ]
+      },
+      "dark-danger": {
+        "role": "neutral",
+        "displayName": "Dark Danger",
+        "canonical": "#F2B8B5"
+      },
+      "dark-danger-tint": {
+        "role": "neutral",
+        "displayName": "Dark Danger Tint",
+        "canonical": "#3B1F1E"
+      },
+      "dark-tab-bar": {
+        "role": "neutral",
+        "displayName": "Dark Tab Bar",
+        "canonical": "#111317"
+      },
+      "dark-pressed": {
+        "role": "neutral",
+        "displayName": "Dark Pressed",
+        "canonical": "#272B33"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Feed banner headline, game detail title on its court, sign-in heading."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Screen and empty-state headings, spots count, profile name."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Card titles, button labels (at 16), host and team names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions, inputs, banner notes, Meta rows."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Card time, place and distance, field and chip labels."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Spots caption and the live clock."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Uppercase feed time sections (TODAY, LATER THIS WEEK); a heading, never a kicker."
+      },
+      "score": {
+        "displayName": "Score",
+        "purpose": "Score tile on a live card, tabular."
+      },
+      "score-huge": {
+        "displayName": "Score Huge",
+        "purpose": "Full-width score tile on the game detail hero, tabular."
+      }
+    },
+    "shadows": [
+      {
+        "name": "on-court-lift",
+        "value": "0 4px 10px rgba(0,0,0,0.16)",
+        "purpose": "Live card resting on the court banner (radius 12 on the detail live panel; Android elevation 4). Never on cards on the neutral ground."
+      }
+    ],
+    "motion": [
+      {
+        "name": "live-pulse",
+        "value": "1100ms ease-out-quad, repeat; ring scale 1 to 2.4, opacity 0.55 to 0",
+        "purpose": "The live dot only; omitted under Reduce Motion."
+      },
+      {
+        "name": "press",
+        "value": "opacity 0.88, scale 0.99",
+        "purpose": "Pressed feedback on feed and live cards."
+      },
+      {
+        "name": "host-focus",
+        "value": "scale 1.06",
+        "purpose": "Host tab tile when focused."
+      }
+    ],
+    "platform": {
+      "units": "React Native points (dp); px in tokens for portability",
+      "orientation": "portrait",
+      "themes": "light default, dark follows system (userInterfaceStyle automatic)",
+      "verification": "Verified by the user on one iPhone in light mode. Live state and dark mode not captured; Android unverified.",
+      "openFollowUps": [
+        "App icon and splash are still Expo default assets."
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Key paint pill for the one main action (Host game, I'm in, Sign in).",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg>Host game</button>",
+      "css": ".ds-btn-primary { font-family: Nunito, ui-rounded, system-ui, sans-serif; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 0 22px; border: none; border-radius: 999px; background: #FF6B2C; color: #1B1D1B; font-weight: 800; font-size: 16px; line-height: 22px; transition: background 0.15s, transform 0.15s; } .ds-btn-primary:hover { background: #E85A1D; } .ds-btn-primary:active { background: #E85A1D; transform: scale(0.99); } .ds-btn-primary:focus-visible { outline: 2px solid #1F3A5F; outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.45; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "White pill with a hairline for second choices (Leave game, Sign out, Try again).",
+      "html": "<button class=\"ds-btn-secondary\">Open settings</button>",
+      "css": ".ds-btn-secondary { font-family: Nunito, ui-rounded, system-ui, sans-serif; min-height: 50px; padding: 0 22px; border: 1.5px solid #E2E4DF; border-radius: 999px; background: #FFFFFF; color: #1B1D1B; font-weight: 800; font-size: 16px; line-height: 22px; transition: background 0.15s; } .ds-btn-secondary:hover, .ds-btn-secondary:active { background: #ECEDEA; } .ds-btn-secondary:focus-visible { outline: 2px solid #1F3A5F; outline-offset: 2px; }"
+    },
+    {
+      "name": "Sport Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Single-select pill row; selected is navy boundary paint.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\">All</button><button class=\"ds-chip ds-chip-selected\">Soccer</button><button class=\"ds-chip\">Basketball</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; } .ds-chip { font-family: Nunito, ui-rounded, system-ui, sans-serif; height: 38px; padding: 0 16px; border: 1.5px solid #E2E4DF; border-radius: 999px; background: #FFFFFF; color: #1B1D1B; font-weight: 700; font-size: 14px; } .ds-chip:hover { background: #ECEDEA; } .ds-chip:focus-visible { outline: 2px solid #1F3A5F; outline-offset: 2px; } .ds-chip-selected, .ds-chip-selected:hover { background: #1F3A5F; border-color: #1F3A5F; color: #FFFFFF; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labeled text input; focus turns the border navy.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Place</span><input class=\"ds-field-input\" placeholder=\"Riverside Courts\"></label>",
+      "css": ".ds-field { font-family: Nunito, ui-rounded, system-ui, sans-serif; display: flex; flex-direction: column; gap: 8px; } .ds-field-label { color: #545A55; font-weight: 700; font-size: 14px; line-height: 19px; } .ds-field-input { font: inherit; min-height: 50px; padding: 0 14px; border: 1.5px solid #E2E4DF; border-radius: 14px; background: #FFFFFF; color: #1B1D1B; font-weight: 600; font-size: 16px; caret-color: #C2410C; outline: none; } .ds-field-input::placeholder { color: #6F756F; } .ds-field-input:focus { border-color: #1F3A5F; } .ds-field-input::selection { background: #FF6B2C; }"
+    },
+    {
+      "name": "Feed Card",
+      "kind": "card",
+      "refersTo": "feed-card",
+      "description": "Upcoming game: court thumbnail, navy time, title, place and distance, spots left.",
+      "html": "<button class=\"ds-card\"><svg class=\"ds-thumb\" width=\"64\" height=\"64\" viewBox=\"0 0 64 64\"><rect width=\"64\" height=\"64\" fill=\"#3A7449\"/><rect x=\"16\" width=\"16\" height=\"64\" fill=\"#356C44\"/><rect x=\"48\" width=\"16\" height=\"64\" fill=\"#356C44\"/><g stroke=\"#FFF\" stroke-width=\"1.6\" fill=\"none\"><rect x=\"6\" y=\"8\" width=\"52\" height=\"48\"/><line x1=\"32\" y1=\"8\" x2=\"32\" y2=\"56\"/><circle cx=\"32\" cy=\"32\" r=\"8\"/></g></svg><span class=\"ds-card-body\"><span class=\"ds-card-when\">6:00 PM</span><span class=\"ds-card-title\">Sunday run</span><span class=\"ds-card-meta\">Riverside Fields · 0.4 mi</span></span><span class=\"ds-card-spots\"><b>6</b><small>spots left</small></span></button>",
+      "css": ".ds-card { font-family: Nunito, ui-rounded, system-ui, sans-serif; display: flex; align-items: center; gap: 14px; width: 340px; padding: 12px; text-align: left; border: 1px solid #E2E4DF; border-radius: 20px; background: #FFFFFF; font-variant-numeric: tabular-nums; transition: opacity 0.15s, transform 0.15s; } .ds-card:active { opacity: 0.88; transform: scale(0.99); } .ds-card:focus-visible { outline: 2px solid #1F3A5F; outline-offset: 2px; } .ds-thumb { border-radius: 14px; flex: none; } .ds-card-body { flex: 1; display: flex; flex-direction: column; gap: 2px; } .ds-card-when { color: #1F3A5F; font-weight: 700; font-size: 14px; } .ds-card-title { color: #1B1D1B; font-weight: 800; font-size: 17px; line-height: 22px; } .ds-card-meta { color: #545A55; font-weight: 700; font-size: 14px; } .ds-card-spots { display: flex; flex-direction: column; align-items: flex-end; min-width: 54px; } .ds-card-spots b { color: #1B1D1B; font-weight: 800; font-size: 22px; line-height: 28px; } .ds-card-spots small { color: #545A55; font-weight: 700; font-size: 12px; }"
+    },
+    {
+      "name": "Live Card with Score Tile",
+      "kind": "custom",
+      "refersTo": "live-card",
+      "description": "A live game resting on the court banner: orange score tile, pulsing dot, ticking clock.",
+      "html": "<div class=\"ds-court\"><button class=\"ds-live\"><span class=\"ds-tile\"><b>14–11</b><small>22:14</small></span><span class=\"ds-live-body\"><span class=\"ds-live-label\"><i class=\"ds-dot\"></i>LIVE · 22:14</span><span class=\"ds-live-title\">Sunday run</span><span class=\"ds-live-meta\">Skins vs Shirts</span></span></button></div>",
+      "css": ".ds-court { font-family: Nunito, ui-rounded, system-ui, sans-serif; padding: 16px; width: 360px; background: #E3BD86; border-radius: 0 0 28px 28px; } .ds-live { display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px; text-align: left; border: none; border-radius: 20px; background: #FFFFFF; box-shadow: 0 4px 10px rgba(0,0,0,0.16); font-variant-numeric: tabular-nums; } .ds-live:active { opacity: 0.88; transform: scale(0.99); } .ds-live:focus-visible { outline: 2px solid #1F3A5F; outline-offset: 2px; } .ds-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 92px; min-height: 68px; padding: 8px 12px; border-radius: 14px; background: #FF6B2C; color: #1B1D1B; } .ds-tile b { font-weight: 900; font-size: 26px; line-height: 30px; } .ds-tile small { font-weight: 700; font-size: 12px; } .ds-live-body { display: flex; flex-direction: column; gap: 2px; } .ds-live-label { display: flex; align-items: center; gap: 7px; color: #C2410C; font-weight: 700; font-size: 12px; letter-spacing: 0.6px; } .ds-dot { position: relative; width: 8px; height: 8px; border-radius: 50%; background: #FF6B2C; } .ds-dot::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: #FF6B2C; animation: ds-pulse 1.1s cubic-bezier(0.5,1,0.89,1) infinite; } @keyframes ds-pulse { from { opacity: 0.55; transform: scale(1); } to { opacity: 0; transform: scale(2.4); } } @media (prefers-reduced-motion: reduce) { .ds-dot::after { display: none; } } .ds-live-title { color: #1B1D1B; font-weight: 800; font-size: 17px; } .ds-live-meta { color: #545A55; font-weight: 700; font-size: 14px; }"
+    },
+    {
+      "name": "Tab Bar with Host Tile",
+      "kind": "nav",
+      "refersTo": "host-tab-tile",
+      "description": "Games, Host, Profile; Host is an in-bar orange tile about 40% larger than the other icons.",
+      "html": "<nav class=\"ds-tabs\"><a class=\"ds-tab ds-tab-active\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>Games</a><a class=\"ds-tab ds-tab-host\" href=\"#\"><span class=\"ds-host\"><svg width=\"25\" height=\"25\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1B1D1B\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg></span>Host</a><a class=\"ds-tab\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/><path d=\"M6.5 18.5c1.5-2 3.4-3 5.5-3s4 1 5.5 3\"/></svg>Profile</a></nav>",
+      "css": ".ds-tabs { font-family: Nunito, ui-rounded, system-ui, sans-serif; display: flex; justify-content: space-around; align-items: flex-end; width: 360px; padding: 8px 0 10px; background: #FFFFFF; border-top: 1px solid #E2E4DF; } .ds-tab { display: flex; flex-direction: column; align-items: center; gap: 2px; color: #545A55; font-weight: 800; font-size: 11px; text-decoration: none; } .ds-tab:focus-visible { outline: 2px solid #1F3A5F; outline-offset: 2px; border-radius: 10px; } .ds-tab-active { color: #1F3A5F; } .ds-tab-host:hover, .ds-tab-host:focus-visible { color: #C2410C; } .ds-host { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 10px; background: #FF6B2C; transition: transform 0.15s; } .ds-tab-host:hover .ds-host { transform: scale(1.06); }"
+    },
+    {
+      "name": "Avatar",
+      "kind": "custom",
+      "refersTo": "avatar",
+      "description": "Navy initials on a navy-tint circle; never orange.",
+      "html": "<span class=\"ds-avatar\">HO</span>",
+      "css": ".ds-avatar { font-family: Nunito, ui-rounded, system-ui, sans-serif; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #E4E9F0; color: #1F3A5F; font-weight: 900; font-size: 17px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Hardwood",
+    "overview": "The screen is painted like the court you're browsing. Each sport's own play area (maple boards, a mowed pitch, a hard court, a gridiron, a clay diamond) is drawn as flat vector art with white painted lines, and it becomes the feed banner and every card thumbnail. Around that painted surface the app is quiet: a soft neutral ground, white cards, rounded Nunito, figures that line up. The paint carries the meaning. Navy is boundary paint (times, selection). Orange is key paint: the thing you tap, the score that's live, the tab that makes a game exist.\n\nDensity is a compact event listing, not a social feed. Each card holds a court, a navy time, a title, a place and distance, and a big spots count on the right. Light is the default. The dark theme is the same court after dusk: the surfaces dim under an overlay, the paint stays bright, and text on the court turns warm cream.\n\nThe world refuses the category default of photo-header cards with an orange Join pill. It also avoids the anti-references in PRODUCT.md (hardcore or elite, corporate booking). Nothing here is pro-league chrome or a time-slot table.",
+    "keyCharacteristics": [
+      "Sport surfaces are the only imagery, and every one is react-native-svg vector art in its real color.",
+      "Orange is key paint only. Navy is boundary paint. Neutrals carry the structure.",
+      "Rounded Nunito throughout. Rank comes from weight first and size second. Every number uses tabular figures.",
+      "Flat at rest. The only shadow belongs to cards sitting on a painted surface.",
+      "Soft forms: 20pt cards, pill buttons and chips, a banner with 28pt rounded bottom corners.",
+      "Motion is minimal: native transitions plus one pulsing live dot, which holds still under Reduce Motion."
+    ],
+    "rules": [
+      {
+        "name": "The Key Paint Rule",
+        "body": "Orange (key-paint-orange) goes only on primary actions, the live score tile, the live dot, and the Host tab tile. Never use it to decorate a surface, an avatar, a border, or a background. Orange text always uses Orange Ink, never the fill value.",
+        "section": "colors"
+      },
+      {
+        "name": "The Live Is Never Red Rule",
+        "body": "Live state is orange plus motion. Danger red is for errors only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dusk Rule",
+        "body": "In dark mode, surfaces dim under a dusk-overlay layer at 40% opacity while the paint (key paint fills, court paint) stays bright. Text on a surface uses Dusk Ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Separate Families Rule",
+        "body": "Each Nunito weight is its own family. Pick the weight by `fontFamily` and never set `fontWeight` alongside it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Every number uses tabular figures (`fontVariant: ['tabular-nums']` via `type.numeric`, `type.score`, or `type.scoreHuge`): times, distances, counts, scores, and clocks.",
+        "section": "typography"
+      },
+      {
+        "name": "The Section Is the Heading Rule",
+        "body": "Section labels such as TODAY and LATER THIS WEEK are headings themselves (accessibilityRole header). Nothing sits above a heading as a kicker or eyebrow.",
+        "section": "typography"
+      },
+      {
+        "name": "The Honest Count Rule",
+        "body": "The feed headline agrees in number: \"One soccer game near you\", \"3 soccer games near you\", \"No soccer games yet\". It reads \"Finding games near you\" while loading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Clear Court Rule",
+        "body": "Court markings never sit behind the headline or the chips. Markings start below the measured text and chip heights (`top`), and the banner keeps room for a whole court end when nothing is live.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Ground Rule",
+        "body": "Cards on the neutral ground use a hairline border, not a shadow. A shadow means the card sits on a painted court.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** paint the selected sport's own surface as the banner and thumbnail, and draw it as react-native-svg vector art in the colors from `src/lib/surfaces.ts`.",
+      "**Do** keep orange to key paint: primary buttons, the score tile, the live dot, and the Host tab tile. Fills carry dark ink, and orange text uses Orange Ink (#C2410C light, #FFB27A dark).",
+      "**Do** use Boundary Navy for times, selection, focus, and the active tab.",
+      "**Do** give every avatar a Navy Tint background with navy initials.",
+      "**Do** start court markings below the headline and chips, and leave room for a whole court end when nothing is live.",
+      "**Do** make section labels (TODAY, LATER THIS WEEK) the headings themselves.",
+      "**Do** make the feed headline agree in number: \"One soccer game near you\" / \"3 soccer games near you\" / \"No soccer games yet\".",
+      "**Do** use tabular figures for every number.",
+      "**Do** select Nunito weights by family name (fonts.semibold through fonts.black).",
+      "**Do** dim surfaces in dark mode with the dusk overlay at 40%, keep the paint bright, and set text on surfaces in Dusk Ink.",
+      "**Do** build styles with `createStyles` so both themes come from one palette."
+    ],
+    "donts": [
+      "**Don't** put decorative orange on surfaces, avatars, borders, or backgrounds, or use the orange fill value for text.",
+      "**Don't** use red for live. Danger is for errors only.",
+      "**Don't** set `fontWeight` on Nunito text.",
+      "**Don't** place a kicker or eyebrow label above a heading.",
+      "**Don't** draw court markings behind the headline or the chips.",
+      "**Don't** ship raster imagery for surfaces or swap in photo-header cards.",
+      "**Don't** give cards on the neutral ground a shadow. Shadows mean a card sits on a painted court."
+    ]
+  }
+}

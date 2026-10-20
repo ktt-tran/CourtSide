@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;height:844px;overflow:hidden;background:#F5F4F0;color:#1B1D1B;font-family:Nunito,system-ui,sans-serif;position:relative}
+.num{font-variant-numeric:tabular-nums}
+.status{height:47px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;font-weight:800;font-size:15px}
+h1{font-size:28px;font-weight:900;padding:6px 16px 0;color:#1C2440}
+.sec{padding:18px 16px 10px;font-size:13px;font-weight:900;letter-spacing:.08em;color:#5B615C}
+.sec.live{color:#C2410C}
+.live{margin:0 16px;border-radius:20px;background:#1C2440;color:#fff;padding:16px}
+.jer{display:flex;justify-content:space-around;align-items:flex-end;margin:6px 0 10px}
+.jn{text-align:center}
+.jn b{display:block;font-size:76px;font-weight:900;line-height:.95;color:#FF6B2C;-webkit-text-stroke:3px #fff;paint-order:stroke fill}
+.jn small{font-size:12px;font-weight:900;letter-spacing:.1em;color:#C9CDE0}
+.vs{font-size:14px;font-weight:900;color:#C9CDE0;padding-bottom:30px}
+.lt{display:flex;justify-content:space-between;font-size:12px;font-weight:900;letter-spacing:.08em;color:#FFC9A8}
+.t{font-size:17px;font-weight:800}
+.m{font-size:14px;font-weight:700;color:#5B615C;margin-top:2px}
+.live .m{color:#C9CDE0}
+.card{margin:0 16px 10px;border-radius:20px;background:#fff;border:1px solid #E6E3DB;padding:12px 14px;display:flex;gap:14px;align-items:center}
+.patch{width:52px;height:52px;border-radius:26px;background:#F2E6CF;border:3px dashed #1C2440;display:flex;align-items:center;justify-content:center;flex:none;font-size:22px;font-weight:900;color:#1C2440}
+.big{margin-left:auto;text-align:center}
+.big b{display:block;font-size:34px;font-weight:900;line-height:1;color:#1C2440;-webkit-text-stroke:2px #FF6B2C;paint-order:stroke fill}
+.big small{font-size:11px;font-weight:900;color:#5B615C;letter-spacing:.06em}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:86px;background:#fff;border-top:1px solid #E6E3DB;display:flex;justify-content:space-around;padding-top:10px}
+.tab{width:90px;text-align:center;font-size:11px;font-weight:800;color:#5B615C}
+.tab i{display:block;width:26px;height:26px;margin:0 auto 4px;border-radius:13px;border:2px solid currentColor}
+.tab.on{color:#1C2440}
+.tab .plus{border:none;border-radius:8px;background:#FF6B2C;color:#1B1D1B;font-style:normal;font-size:20px;font-weight:900;line-height:26px}
+</style></head><body>
+<div class="status"><span class="num">9:41</span><span>●●● ▮</span></div>
+<h1>Games near you</h1>
+<div class="sec live">● LIVE NOW</div>
+<div class="live">
+  <div class="lt num"><span>BASKETBALL · 22:14</span><span>0.4 MI</span></div>
+  <div class="jer"><div class="jn num"><b>14</b><small>SKINS</small></div><div class="vs">vs</div><div class="jn num"><b>11</b><small>SHIRTS</small></div></div>
+  <div class="t">Sunday run at the Rec</div><div class="m">maya_k hosting · 10 playing</div>
+</div>
+<div class="sec">TODAY</div>
+<div class="card"><div class="patch">S</div><div><div class="t">7v7 on North Field</div><div class="m num">6:00 PM · 0.7 mi</div></div><div class="big num"><b>6</b><small>SPOTS LEFT</small></div></div>
+<div class="card"><div class="patch">T</div><div><div class="t">Doubles, all levels</div><div class="m num">7:30 PM · 1.1 mi</div></div><div class="big num"><b>2</b><small>SPOTS LEFT</small></div></div>
+<div class="sec">LATER THIS WEEK</div>
+<div class="card"><div class="patch">B</div><div><div class="t">Softball in the quad</div><div class="m num">Thu 5:00 PM · 0.3 mi</div></div><div class="big num"><b>13</b><small>SPOTS LEFT</small></div></div>
+<nav class="tabbar"><div class="tab on"><i></i>Games</div><div class="tab"><i class="plus">+</i>Host</div><div class="tab"><i></i>Profile</div></nav>
+</body></html>

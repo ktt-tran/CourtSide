@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "nunito",
+        "createdAt": "2026-10-20T00:53:47.729Z",
+        "reason": "model: same as lowercase entry; documented face under expo-font family names"
+      }
+    ]
+  }
+}

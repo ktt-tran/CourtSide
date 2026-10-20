@@ -1,47 +1,61 @@
-import { ActivityIndicator, Pressable, StyleSheet, Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 
-import { colors, fontSize, radius } from '@/lib/theme';
+import type { IconName } from '@/lib/categories';
+import { createStyles, radius, type, usePalette } from '@/lib/theme';
 
 type Props = {
   title: string;
   onPress: () => void;
   variant?: 'primary' | 'secondary';
+  icon?: IconName;
   busy?: boolean;
   disabled?: boolean;
 };
 
-export function Button({ title, onPress, variant = 'primary', busy = false, disabled = false }: Props) {
+// A pill. Primary is key paint (orange with dark ink); secondary is a white pill with a hairline.
+export function Button({ title, onPress, variant = 'primary', icon, busy = false, disabled = false }: Props) {
+  const styles = useStyles();
+  const c = usePalette();
   const primary = variant === 'primary';
-  const textColor = primary ? colors.paper : colors.ink;
+  const textColor = primary ? c.onAccent : c.ink;
   return (
     <Pressable
       onPress={onPress}
       disabled={disabled || busy}
       accessibilityRole="button"
+      accessibilityState={{ disabled: disabled || busy, busy }}
       style={({ pressed }) => [
         styles.base,
         primary ? styles.primary : styles.secondary,
-        (pressed || disabled) && styles.dim,
+        pressed && (primary ? styles.primaryPressed : styles.secondaryPressed),
+        disabled && styles.disabled,
       ]}>
       {busy ? (
         <ActivityIndicator color={textColor} />
       ) : (
-        <Text style={[styles.label, { color: textColor }]}>{title}</Text>
+        <View style={styles.row}>
+          {icon ? <Ionicons name={icon} size={18} color={textColor} /> : null}
+          <Text style={[styles.label, { color: textColor }]}>{title}</Text>
+        </View>
       )}
     </Pressable>
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = createStyles((c) => ({
   base: {
-    minHeight: 44,
-    borderRadius: radius.md,
-    paddingHorizontal: 16,
+    minHeight: 50,
+    borderRadius: radius.pill,
+    paddingHorizontal: 22,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  primary: { backgroundColor: colors.accent },
-  secondary: { backgroundColor: colors.paper, borderWidth: 1, borderColor: colors.line },
-  dim: { opacity: 0.6 },
-  label: { fontSize: fontSize.body, fontWeight: '500' },
-});
+  row: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  primary: { backgroundColor: c.accent },
+  primaryPressed: { backgroundColor: '#E85A1D' },
+  secondary: { backgroundColor: c.paper, borderWidth: 1.5, borderColor: c.line },
+  secondaryPressed: { backgroundColor: c.pressed },
+  disabled: { opacity: 0.45 },
+  label: { ...type.headline, fontSize: 16 },
+}));

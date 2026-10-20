@@ -1,4 +1,4 @@
--- Pickup Ball: initial schema.
+-- CourtSide: initial schema.
 --
 -- Run it in the Supabase SQL editor, or keep it under supabase/migrations/ and use `supabase db push`.
 --

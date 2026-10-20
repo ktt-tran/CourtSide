@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;height:844px;overflow:hidden;background:#15171C;color:#EDEAE3;font-family:Nunito,system-ui,sans-serif;position:relative}
+.num{font-variant-numeric:tabular-nums}
+.floor{position:relative;height:300px;background:repeating-linear-gradient(90deg,#6E5232 0 46px,#664B2D 46px 47px,#735636 47px 93px,#664B2D 93px 94px);overflow:hidden}
+.floor svg{position:absolute;inset:0}
+.status{position:relative;height:47px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;font-weight:800;font-size:15px}
+.hd{position:relative;padding:4px 16px}
+.hd small{font-size:13px;font-weight:900;letter-spacing:.06em;color:#F3E3CC}
+.hd h1{font-size:30px;font-weight:900;color:#fff;line-height:1.1}
+.chips{position:relative;display:flex;gap:8px;padding:14px 16px 0}
+.chip{height:34px;padding:0 14px;border-radius:17px;background:rgba(21,23,28,.75);display:flex;align-items:center;font-size:14px;font-weight:800;color:#EDEAE3}
+.chip.on{background:#EDEAE3;color:#15171C}
+.live{position:relative;margin:16px 16px 0;border-radius:20px;background:#1F2229;padding:14px;display:flex;gap:14px;align-items:center}
+.key{width:86px;height:64px;border-radius:14px;background:#FF6B2C;color:#15171C;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none}
+.key b{font-size:26px;font-weight:900;line-height:1}
+.key span{font-size:11px;font-weight:900;margin-top:2px}
+.t{font-size:16px;font-weight:800}
+.m{font-size:14px;font-weight:700;color:#B4B7BE;margin-top:2px}
+.lv{font-size:12px;font-weight:900;color:#FFB27A;letter-spacing:.06em}
+.sec{padding:18px 16px 10px;font-size:13px;font-weight:900;letter-spacing:.08em;color:#A4A7AE}
+.card{margin:0 16px 10px;border-radius:20px;background:#1B1D23;border:1px solid #2A2D35;padding:12px;display:flex;gap:14px;align-items:center}
+.th{width:64px;height:64px;border-radius:14px;flex:none}
+.when{font-size:13px;font-weight:900;color:#EDEAE3}
+.sp{margin-left:auto;font-size:13px;font-weight:800;color:#A4A7AE;text-align:right}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:86px;background:#111317;border-top:1px solid #23262D;display:flex;justify-content:space-around;align-items:flex-start;padding-top:8px}
+.tab{width:90px;text-align:center;font-size:11px;font-weight:800;color:#A4A7AE}
+.tab i{display:block;width:26px;height:26px;margin:2px auto 4px;border-radius:13px;border:2px solid currentColor}
+.tab.on{color:#FF6B2C}
+.tab .plus{width:32px;height:32px;margin:0 auto 2px;border:none;border-radius:10px;background:#FF6B2C;color:#15171C;font-style:normal;font-size:24px;font-weight:900;line-height:32px}
+</style></head><body>
+<div class="floor"><svg width="390" height="300" fill="none" stroke="#FFF4E6" stroke-width="3" stroke-opacity=".85"><line x1="-10" y1="200" x2="400" y2="200"/><circle cx="300" cy="200" r="58"/><path d="M-10 90h120v240" stroke="#9CB4D6"/></svg>
+  <div class="status"><span class="num">9:41</span><span>●●● ▮</span></div>
+  <div class="hd"><small>BASKETBALL NEAR YOU</small><h1>One game is on</h1></div>
+  <div class="chips"><div class="chip">All</div><div class="chip on">Basketball</div><div class="chip">Soccer</div><div class="chip">Tennis</div></div>
+  <div class="live"><div class="key num"><b>14–11</b><span>22:14</span></div><div><div class="lv">● LIVE · BASKETBALL</div><div class="t">Sunday run at the Rec</div><div class="m">Rec Center courts · 0.4 mi · maya_k</div></div></div>
+</div>
+<div class="sec">TODAY</div>
+<div class="card"><svg class="th" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#7A5A34"/><g fill="none" stroke="#FFF4E6" stroke-width="1.8"><rect x="8" y="10" width="48" height="44"/><line x1="32" y1="10" x2="32" y2="54"/><circle cx="32" cy="32" r="8"/><rect x="8" y="22" width="12" height="20"/><rect x="44" y="22" width="12" height="20"/></g></svg>
+  <div><div class="when num">7:00 PM</div><div class="t">3v3 half court</div><div class="m">Outdoor courts by Lot C · 1.0 mi</div></div><div class="sp num">4/6<br>spots</div></div>
+<div class="card"><svg class="th" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#7A5A34"/><g fill="none" stroke="#FFF4E6" stroke-width="1.8"><rect x="8" y="10" width="48" height="44"/><line x1="32" y1="10" x2="32" y2="54"/><circle cx="32" cy="32" r="8"/><rect x="8" y="22" width="12" height="20"/><rect x="44" y="22" width="12" height="20"/></g></svg>
+  <div><div class="when num">9:00 PM</div><div class="t">Late run, any level</div><div class="m">Rec Center gym 1 · 0.4 mi</div></div><div class="sp num">7/10<br>spots</div></div>
+<nav class="tabbar"><div class="tab on"><i></i>Games</div><div class="tab"><i class="plus">+</i>Host</div><div class="tab"><i></i>Profile</div></nav>
+</body></html>

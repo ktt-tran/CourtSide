@@ -1,13 +1,15 @@
-import { useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 
 import { Button } from '@/components/Button';
 import { Field } from '@/components/Field';
+import { SportThumb } from '@/components/SportSurface';
 import { supabase } from '@/lib/supabase';
-import { colors, fontSize } from '@/lib/theme';
+import { createStyles, type } from '@/lib/theme';
 
 export default function SignIn() {
+  const styles = useStyles();
   const router = useRouter();
   const [mode, setMode] = useState<'in' | 'up'>('in');
   const [email, setEmail] = useState('');
@@ -47,6 +49,16 @@ export default function SignIn() {
       contentContainerStyle={styles.content}
       keyboardShouldPersistTaps="handled"
       automaticallyAdjustKeyboardInsets>
+      <Stack.Screen options={{ title: mode === 'in' ? 'Sign in' : 'Create account' }} />
+      <View style={styles.intro}>
+        <SportThumb sport="basketball" size={56} />
+        <Text style={styles.heading}>{mode === 'in' ? 'Welcome back' : 'Join the run'}</Text>
+        <Text style={styles.sub}>
+          {mode === 'in'
+            ? 'Sign in to join games and see who\u2019s playing.'
+            : 'Pick a username people will see when you host or join.'}
+        </Text>
+      </View>
       {mode === 'up' ? (
         <Field
           label="Username"
@@ -96,8 +108,11 @@ export default function SignIn() {
   );
 }
 
-const styles = StyleSheet.create({
-  content: { padding: 20, gap: 16 },
-  message: { fontSize: fontSize.meta, color: colors.inkSoft, lineHeight: 19 },
-  switch: { fontSize: fontSize.body, color: colors.accent, textAlign: 'center', paddingVertical: 8 },
-});
+const useStyles = createStyles((c) => ({
+  content: { padding: 20, gap: 18, paddingBottom: 40 },
+  intro: { gap: 6, marginBottom: 6 },
+  heading: { ...type.display, color: c.ink, marginTop: 12 },
+  sub: { ...type.body, color: c.inkSoft },
+  message: { ...type.meta, color: c.inkSoft },
+  switch: { ...type.headline, fontSize: 16, color: c.accentInk, textAlign: 'center', paddingVertical: 12 },
+}));

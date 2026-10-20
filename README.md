@@ -1,4 +1,4 @@
-# Pickup Ball
+# CourtSide
 
 A local pickup-game feed: host a game, see what's happening nearby, watch the score live. Built from
 the feasibility/architecture doc from our chat — see that for the reasoning behind every choice below;

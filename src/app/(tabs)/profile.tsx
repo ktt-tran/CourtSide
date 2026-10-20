@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { Avatar } from '@/components/Avatar';
 import { Button } from '@/components/Button';
 import { SignInPrompt } from '@/components/SignInPrompt';
 import { useAuth } from '@/lib/auth';
 import { supabase } from '@/lib/supabase';
-import { colors, fontSize } from '@/lib/theme';
+import { createStyles, type } from '@/lib/theme';
 
 export default function Profile() {
+  const styles = useStyles();
   const { session } = useAuth();
   const userId = session?.user.id ?? null;
   const [username, setUsername] = useState<string | null>(null);
@@ -24,13 +25,18 @@ export default function Profile() {
   }, [userId]);
 
   if (!session) {
-    return <SignInPrompt message="Sign in to host games, join them, and see who's playing." />;
+    return (
+      <SignInPrompt
+        title="Get in the game"
+        message="Sign in to host games, join them, and see who's playing."
+      />
+    );
   }
 
   const name = username ?? session.user.email ?? 'You';
   return (
     <View style={styles.screen}>
-      <Avatar name={name} size={64} />
+      <Avatar name={name} size={80} />
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.email}>{session.user.email}</Text>
       <View style={styles.action}>
@@ -40,9 +46,9 @@ export default function Profile() {
   );
 }
 
-const styles = StyleSheet.create({
-  screen: { flex: 1, alignItems: 'center', paddingTop: 48, gap: 8, paddingHorizontal: 24 },
-  name: { fontSize: 20, fontWeight: '500', color: colors.ink, marginTop: 8 },
-  email: { fontSize: fontSize.meta, color: colors.inkSoft },
-  action: { marginTop: 24, alignSelf: 'stretch' },
-});
+const useStyles = createStyles((c) => ({
+  screen: { flex: 1, alignItems: 'center', paddingTop: 40, gap: 4, paddingHorizontal: 24 },
+  name: { ...type.title, color: c.ink, marginTop: 14 },
+  email: { ...type.body, color: c.inkSoft },
+  action: { marginTop: 28, alignSelf: 'stretch' },
+}));

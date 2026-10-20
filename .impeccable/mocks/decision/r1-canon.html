@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;height:844px;overflow:hidden;background:#F2F3F5;color:#111827;font-family:Nunito,system-ui,sans-serif;position:relative}
+.num{font-variant-numeric:tabular-nums}
+.status{height:47px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;font-weight:800;font-size:15px}
+.brand{padding:4px 16px;font-size:24px;font-weight:900}
+.search{margin:10px 16px 0;height:44px;border-radius:22px;background:#fff;border:1px solid #E3E5EA;display:flex;align-items:center;padding:0 16px;font-size:15px;font-weight:700;color:#4B5563}
+.chips{display:flex;gap:8px;padding:12px 16px 0}
+.chip{height:34px;padding:0 14px;border-radius:17px;background:#fff;border:1px solid #E3E5EA;display:flex;align-items:center;font-size:14px;font-weight:800;color:#374151}
+.chip.on{background:#111827;color:#fff}
+.card{margin:14px 16px 0;border-radius:20px;background:#fff;overflow:hidden;border:1px solid #E3E5EA}
+.img{height:120px;position:relative}
+.badge{position:absolute;left:12px;top:12px;background:#fff;color:#C2410C;font-weight:900;font-size:12px;padding:5px 10px;border-radius:12px}
+.b{padding:14px}
+.t{font-size:18px;font-weight:900}
+.m{font-size:14px;font-weight:700;color:#4B5563;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.av{display:flex}.av span{width:26px;height:26px;border-radius:13px;background:#D1D5DB;border:2px solid #fff;margin-left:-7px}.av span:first-child{margin-left:0}
+.cnt{font-size:13px;font-weight:800;color:#4B5563;margin-left:8px}
+.join{height:38px;padding:0 20px;border-radius:19px;background:#FF6B2C;color:#111827;font-weight:900;display:flex;align-items:center}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:86px;background:#fff;border-top:1px solid #E3E5EA;display:flex;justify-content:space-around;padding-top:10px}
+.tab{width:90px;text-align:center;font-size:11px;font-weight:800;color:#4B5563}
+.tab i{display:block;width:26px;height:26px;margin:0 auto 4px;border-radius:13px;border:2px solid currentColor}
+.tab.on{color:#C2410C}
+.tab .plus{border:none;border-radius:8px;background:#FF6B2C;color:#111827;font-style:normal;font-size:20px;font-weight:900;line-height:26px}
+</style></head><body>
+<div class="status"><span class="num">9:41</span><span>●●● ▮</span></div>
+<div class="brand">CourtSide</div>
+<div class="search">Search games or places</div>
+<div class="chips"><div class="chip on">All</div><div class="chip">Basketball</div><div class="chip">Soccer</div><div class="chip">Tennis</div></div>
+<div class="card"><svg class="img" width="358" height="120"><rect width="358" height="120" fill="#F4A261"/><g fill="none" stroke="#fff" stroke-width="2.5" stroke-opacity=".8"><rect x="30" y="16" width="298" height="120"/><circle cx="179" cy="76" r="28"/><line x1="179" y1="16" x2="179" y2="136"/></g></svg>
+  <span class="badge num">● LIVE 14–11</span>
+  <div class="b"><div class="t">Sunday run at the Rec</div><div class="m">Rec Center courts · 0.4 mi · 22:14 in</div>
+  <div class="row"><div style="display:flex;align-items:center"><div class="av"><span></span><span></span><span></span></div><span class="cnt num">10/12</span></div><div class="join">Join</div></div></div></div>
+<div class="card"><svg class="img" width="358" height="120"><rect width="358" height="120" fill="#7FB58A"/><g fill="none" stroke="#fff" stroke-width="2.5" stroke-opacity=".8"><rect x="30" y="16" width="298" height="120"/><circle cx="179" cy="76" r="28"/><line x1="179" y1="16" x2="179" y2="136"/></g></svg>
+  <div class="b"><div class="t">7v7 on North Field</div><div class="m">Today 6:00 PM · 0.7 mi</div>
+  <div class="row"><div style="display:flex;align-items:center"><div class="av"><span></span><span></span></div><span class="cnt num">8/14</span></div><div class="join">Join</div></div></div></div>
+<nav class="tabbar"><div class="tab"><i></i>Games</div><div class="tab"><i class="plus">+</i>Host</div><div class="tab"><i></i>Profile</div></nav>
+</body></html>

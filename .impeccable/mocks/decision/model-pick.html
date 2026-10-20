@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&family=Doto:wght@800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;height:844px;overflow:hidden;background:#0E0F12;color:#F2F0EA;font-family:Nunito,system-ui,sans-serif;position:relative}
+.num{font-variant-numeric:tabular-nums}
+.status{height:47px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;font-weight:800;font-size:15px}
+h1{font-size:28px;font-weight:900;padding:6px 16px 14px}
+.board{margin:0 16px;border-radius:20px;background:#1A1C21;padding:16px;border:1px solid #2A2C32}
+.top{display:flex;justify-content:space-between;font-size:12px;font-weight:900;letter-spacing:.08em;color:#FFB27A}
+.panels{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-top:12px}
+.team{text-align:center}
+.team small{display:block;font-size:12px;font-weight:900;letter-spacing:.1em;color:#9A9CA3;margin-bottom:6px}
+.digits{font-family:Doto,monospace;font-size:64px;font-weight:900;line-height:1;color:#FF6B2C;background:#0B0C0E;border-radius:14px;padding:8px 0}
+.clockbox{text-align:center}
+.clockbox .digits{font-size:26px;color:#FFD9B8;padding:8px 10px}
+.clockbox small{display:block;font-size:11px;font-weight:900;color:#9A9CA3;margin-top:6px}
+.bt{margin-top:14px;font-size:17px;font-weight:800}
+.meta{font-size:14px;font-weight:600;color:#9A9CA3;margin-top:2px}
+.sec{padding:20px 16px 10px;font-size:13px;font-weight:900;letter-spacing:.08em;color:#9A9CA3}
+.card{margin:0 16px 10px;border-radius:20px;background:#17191E;border:1px solid #26282E;padding:14px;display:flex;gap:14px;align-items:center}
+.mini{width:72px;height:56px;border-radius:12px;background:#0B0C0E;display:flex;align-items:center;justify-content:center;font-family:Doto,monospace;font-size:22px;font-weight:900;color:#FFD9B8;flex:none}
+.t{font-size:16px;font-weight:800}
+.go{margin-left:auto;height:34px;padding:0 14px;border-radius:17px;background:#FF6B2C;color:#0E0F12;font-weight:900;font-size:14px;display:flex;align-items:center}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:86px;background:#0B0C0E;border-top:1px solid #222;display:flex;justify-content:space-around;padding-top:10px}
+.tab{width:80px;text-align:center;font-size:11px;font-weight:800;color:#A4A7AE}.tab.on{color:#FF6B2C}
+.tab i{display:block;width:24px;height:24px;margin:0 auto 4px;border-radius:12px;border:2px solid currentColor}
+.plus{width:62px;height:62px;border-radius:31px;background:#FF6B2C;margin-top:-30px;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:900;color:#0E0F12;box-shadow:0 0 0 6px #0E0F12}
+</style></head><body>
+<div class="status"><span class="num">9:41</span><span>●●● ▮</span></div>
+<h1>Games near you</h1>
+<div class="board">
+  <div class="top"><span>● LIVE NOW · BASKETBALL</span><span>REC CENTER</span></div>
+  <div class="panels">
+    <div class="team"><small>SKINS</small><div class="digits num">14</div></div>
+    <div class="clockbox"><div class="digits num">22:14</div><small>ELAPSED</small></div>
+    <div class="team"><small>SHIRTS</small><div class="digits num">11</div></div>
+  </div>
+  <div class="bt">Sunday run at the Rec</div>
+  <div class="meta">0.4 mi · maya_k hosting · 10 playing</div>
+</div>
+<div class="sec">TODAY</div>
+<div class="card"><div class="mini num">6:00</div><div><div class="t">7v7 on North Field</div><div class="meta">Soccer · 0.7 mi · 8/14</div></div><div class="go">Join</div></div>
+<div class="card"><div class="mini num">7:30</div><div><div class="t">Doubles, all levels</div><div class="meta">Tennis · 1.1 mi · 2/4</div></div><div class="go">Join</div></div>
+<div class="sec">LATER THIS WEEK</div>
+<div class="card"><div class="mini num">THU</div><div><div class="t">Softball in the quad</div><div class="meta">Baseball · 0.3 mi · 5/18</div></div><div class="go">Join</div></div>
+<nav class="tabbar"><div class="tab on"><i></i>Games</div><div class="plus">+</div><div class="tab"><i></i>Profile</div></nav>
+</body></html>

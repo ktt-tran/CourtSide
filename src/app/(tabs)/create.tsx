@@ -1,17 +1,18 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 
 import { Button } from '@/components/Button';
 import { Chips } from '@/components/Chips';
 import { Field } from '@/components/Field';
 import { Meta } from '@/components/Meta';
 import { SignInPrompt } from '@/components/SignInPrompt';
+import { SportThumb } from '@/components/SportSurface';
 import { useAuth } from '@/lib/auth';
-import { categoryOptions } from '@/lib/categories';
+import { CATEGORIES } from '@/lib/categories';
 import { useLocation } from '@/lib/location';
 import { supabase } from '@/lib/supabase';
-import { colors, fontSize } from '@/lib/theme';
+import { createStyles, radius, type } from '@/lib/theme';
 
 // Presets keep the form to one tap. Swap in a date/time picker when you want exact times.
 const START_OPTIONS = [
@@ -22,6 +23,7 @@ const START_OPTIONS = [
 ];
 
 export default function Create() {
+  const styles = useStyles();
   const { session } = useAuth();
   const router = useRouter();
   const { coords, status, retry } = useLocation();
@@ -36,7 +38,12 @@ export default function Create() {
   const [error, setError] = useState<string | null>(null);
 
   if (!session) {
-    return <SignInPrompt message="Sign in to host a game." />;
+    return (
+      <SignInPrompt
+        title="Start a game"
+        message="Sign in to host. Your game shows up for everyone nearby, and you can keep score live."
+      />
+    );
   }
   const userId = session.user.id;
 
@@ -100,7 +107,23 @@ export default function Create() {
 
       <View style={styles.group}>
         <Text style={styles.label}>Sport</Text>
-        <Chips options={categoryOptions} value={category} onChange={setCategory} />
+        <View style={styles.sports}>
+          {CATEGORIES.map((sport) => {
+            const selected = sport.id === category;
+            return (
+              <Pressable
+                key={sport.id}
+                onPress={() => setCategory(sport.id)}
+                accessibilityRole="button"
+                accessibilityLabel={sport.label}
+                accessibilityState={{ selected }}
+                style={({ pressed }) => [styles.sport, selected && styles.sportSelected, pressed && styles.sportPressed]}>
+                <SportThumb sport={sport.id} size={56} />
+                <Text style={[styles.sportLabel, selected && styles.sportLabelSelected]}>{sport.label}</Text>
+              </Pressable>
+            );
+          })}
+        </View>
       </View>
 
       <View style={styles.group}>
@@ -126,7 +149,9 @@ export default function Create() {
 
       <View style={styles.group}>
         <Text style={styles.label}>When</Text>
-        <Chips options={START_OPTIONS} value={startInMinutes} onChange={setStartInMinutes} />
+        <View style={styles.bleed}>
+          <Chips options={START_OPTIONS} value={startInMinutes} onChange={setStartInMinutes} inset={16} />
+        </View>
       </View>
 
       <Field
@@ -148,15 +173,32 @@ export default function Create() {
       />
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
-      <Button title="Host game" onPress={submit} busy={busy} disabled={status !== 'granted'} />
+      <Button title="Host game" icon="add" onPress={submit} busy={busy} disabled={status !== 'granted'} />
     </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  content: { padding: 16, gap: 18, paddingBottom: 48 },
-  group: { gap: 8 },
-  label: { fontSize: fontSize.meta, color: colors.inkSoft, fontWeight: '500' },
-  locationOff: { gap: 8 },
-  error: { fontSize: fontSize.meta, color: colors.live },
-});
+const useStyles = createStyles((c) => ({
+  content: { padding: 16, gap: 22, paddingBottom: 48 },
+  group: { gap: 10 },
+  label: { ...type.meta, color: c.inkSoft },
+  locationOff: { gap: 10 },
+  bleed: { marginHorizontal: -16 },
+  error: { ...type.meta, color: c.danger },
+  sports: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  sport: {
+    width: '31%',
+    flexGrow: 1,
+    alignItems: 'center',
+    gap: 8,
+    paddingVertical: 12,
+    borderRadius: radius.lg,
+    borderWidth: 2,
+    borderColor: c.line,
+    backgroundColor: c.paper,
+  },
+  sportSelected: { borderColor: c.navy },
+  sportPressed: { backgroundColor: c.pressed },
+  sportLabel: { ...type.meta, color: c.inkSoft },
+  sportLabelSelected: { color: c.ink },
+}));

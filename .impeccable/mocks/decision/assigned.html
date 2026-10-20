@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;height:844px;overflow:hidden;background:#15171C;color:#EDEAE3;font-family:Nunito,system-ui,sans-serif;position:relative}
+.num{font-variant-numeric:tabular-nums}
+.status{height:47px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;font-weight:700;font-size:15px}
+header{padding:8px 16px 0}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#8C8F96}
+h1{font-size:30px;font-weight:900;letter-spacing:-.01em;margin-top:2px}
+.chips{display:flex;gap:8px;margin:14px 0 4px;padding:0 16px}
+.chip{height:34px;padding:0 14px;border-radius:17px;border:1.5px solid #2E323B;display:flex;align-items:center;font-size:14px;font-weight:700;color:#C4C6CB}
+.chip.on{background:#EDEAE3;color:#15171C;border-color:#EDEAE3}
+.sec{display:flex;align-items:center;gap:8px;padding:18px 16px 10px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#8C8F96}
+.sec .dot{width:8px;height:8px;border-radius:4px;background:#FF6B2C;outline:2px solid rgba(255,107,44,.45);outline-offset:2px}
+.sec.live{color:#FFB27A}
+/* lit card: floodlight pool from above */
+.lit{margin:0 16px;border-radius:20px;overflow:hidden;position:relative;background:
+radial-gradient(120% 90% at 50% -10%,rgba(255,150,80,.34),rgba(255,107,44,.06) 40%,rgba(31,34,41,0) 70%),#1F2229;border:1px solid rgba(255,150,80,.35)}
+.court{height:118px;position:relative}
+.court svg{position:absolute;inset:0}
+.lit .body{padding:0 16px 16px;margin-top:-34px;position:relative}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font-size:46px;font-weight:900;line-height:1}
+.score span{font-size:15px;font-weight:700;color:#C4C6CB}
+.clock{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#FFB27A;margin-bottom:6px}
+.clock i{width:7px;height:7px;border-radius:4px;background:#FF6B2C}
+.title{font-size:18px;font-weight:800;margin-top:10px}
+.meta{font-size:14px;font-weight:600;color:#C4C6CB;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.av{display:flex}.av span{width:26px;height:26px;border-radius:13px;border:2px solid #1F2229;margin-left:-7px;background:#3A3F49;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.av span:first-child{margin-left:0;background:#C9853F;color:#15171C}
+.watch{height:36px;padding:0 16px;border-radius:18px;background:#FF6B2C;color:#15171C;font-weight:900;font-size:14px;display:flex;align-items:center}
+/* unlit card */
+.card{margin:0 16px 10px;border-radius:20px;background:#1B1D23;border:1px solid #2A2D35;display:flex;gap:14px;padding:12px;align-items:center}
+.thumb{width:64px;height:64px;border-radius:14px;background:#22262E;flex:none;position:relative;overflow:hidden}
+.card .title{margin-top:0;font-size:16px}
+.when{font-size:13px;font-weight:800;color:#EDEAE3}
+.spots{font-size:13px;font-weight:700;color:#8C8F96;margin-left:auto;text-align:right}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:86px;background:#111317;border-top:1px solid #23262D;display:flex;justify-content:space-around;padding-top:10px}
+.tab{width:80px;text-align:center;font-size:11px;font-weight:800;color:#A4A7AE}
+.tab .ic{width:24px;height:24px;margin:0 auto 4px;border-radius:12px;border:2px solid currentColor}
+.tab.on{color:#FF6B2C}
+.plus{width:62px;height:62px;border-radius:31px;background:#FF6B2C;margin-top:-30px;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:900;color:#15171C;box-shadow:0 0 0 6px #15171C}
+</style></head><body>
+<div class="status"><span class="num">9:41</span><span>●●● ▮</span></div>
+<header><div class="eyebrow">Tonight near you</div><h1>3 courts are lit</h1></header>
+<div class="chips"><div class="chip on">All</div><div class="chip">Basketball</div><div class="chip">Soccer</div><div class="chip">Tennis</div></div>
+
+<div class="sec live"><span class="dot"></span>Live now</div>
+<div class="lit">
+  <div class="court"><svg viewBox="0 0 358 118" fill="none" stroke="#FFD2B0" stroke-opacity=".55" stroke-width="2">
+    <rect x="24" y="16" width="310" height="140" rx="2"/><line x1="179" y1="16" x2="179" y2="156"/>
+    <circle cx="179" cy="86" r="30"/><rect x="24" y="56" width="58" height="60"/><rect x="276" y="56" width="58" height="60"/>
+    <path d="M24 40a76 76 0 0 1 0 92M334 40a76 76 0 0 0 0 92"/></svg></div>
+  <div class="body">
+    <div class="clock num"><i></i>LIVE · 22:14</div>
+    <div class="score num"><b>14–11</b><span>Skins vs Shirts</span></div>
+    <div class="title">Sunday run at the Rec</div>
+    <div class="meta">Rec Center courts · 0.4 mi · maya_k hosting</div>
+    <div class="row"><div class="av"><span>MK</span><span>DR</span><span>JP</span><span>+7</span></div><div class="watch">Watch</div></div>
+  </div>
+</div>
+
+<div class="sec">Today</div>
+<div class="card"><div class="thumb"><svg viewBox="0 0 64 64" fill="none" stroke="#EDEAE3" stroke-opacity=".7" stroke-width="1.6"><rect x="8" y="10" width="48" height="44"/><line x1="8" y1="32" x2="56" y2="32"/><circle cx="32" cy="32" r="8"/><rect x="22" y="10" width="20" height="8"/><rect x="22" y="46" width="20" height="8"/></svg></div>
+  <div><div class="when num">6:00 PM</div><div class="title">7v7 on North Field</div><div class="meta">0.7 mi · dre hosting</div></div><div class="spots num">8/14<br>spots</div></div>
+<div class="card"><div class="thumb"><svg viewBox="0 0 64 64" fill="none" stroke="#EDEAE3" stroke-opacity=".7" stroke-width="1.6"><rect x="10" y="8" width="44" height="48"/><line x1="10" y1="32" x2="54" y2="32"/><line x1="18" y1="8" x2="18" y2="56"/><line x1="46" y1="8" x2="46" y2="56"/><line x1="18" y1="20" x2="46" y2="20"/><line x1="18" y1="44" x2="46" y2="44"/><line x1="32" y1="20" x2="32" y2="44"/></svg></div>
+  <div><div class="when num">7:30 PM</div><div class="title">Doubles, all levels</div><div class="meta">Courts by Lot C · 1.1 mi</div></div><div class="spots num">2/4<br>spots</div></div>
+
+<nav class="tabbar"><div class="tab on"><div class="ic"></div>Games</div><div class="plus">+</div><div class="tab"><div class="ic"></div>Profile</div></nav>
+</body></html>

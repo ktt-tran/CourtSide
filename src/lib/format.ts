@@ -36,3 +36,41 @@ export function formatScore(score: Score | null): string {
     .map(([team, points]) => `${team.charAt(0).toUpperCase()}${team.slice(1)} ${points}`)
     .join(' \u2014 ');
 }
+
+// The two halves of a score for the key-paint tile: "14–11", or null before anyone scores.
+export function scoreNumbers(score: Score | null): string | null {
+  const values = Object.values(score ?? {});
+  return values.length === 0 ? null : values.join('–');
+}
+
+// "Skins vs Shirts", from the score's team keys.
+export function scoreTeams(score: Score | null): string | null {
+  const teams = Object.keys(score ?? {});
+  if (teams.length === 0) return null;
+  return teams.map((t) => `${t.charAt(0).toUpperCase()}${t.slice(1)}`).join(' vs ');
+}
+
+// The banner headline, counted honestly: "One soccer game near you", "3 games near you".
+export function feedHeadline(count: number, noun: string | null): string {
+  const what = noun ? `${noun} game` : 'game';
+  if (count === 0) return noun ? `No ${noun} games yet` : 'No games near you yet';
+  if (count === 1) return `One ${what} near you`;
+  return `${count} ${what}s near you`;
+}
+
+// Clock time only, for cards already grouped under "Today": "6:00 PM".
+export function formatClock(iso: string): string {
+  return new Date(iso).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+}
+
+export type FeedSection = 'today' | 'week' | 'later';
+
+// Which time section a not-live game belongs to, by the viewer's calendar.
+export function sectionOf(iso: string, now: Date = new Date()): FeedSection {
+  const start = new Date(iso);
+  const endOfToday = new Date(now);
+  endOfToday.setHours(23, 59, 59, 999);
+  if (start <= endOfToday) return 'today';
+  const endOfWeek = new Date(endOfToday.getTime() + 6 * 86_400_000);
+  return start <= endOfWeek ? 'week' : 'later';
+}
